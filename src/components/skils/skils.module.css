@@ -1,0 +1,20 @@
+.skills{
+    margin-bottom: 2rem;
+}
+
+.most,
+.tag{
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.most{
+    margin-bottom: 0.5rem;
+}
+
+.title{
+    font-weight: 700;
+    width: 7rem;
+    padding-right: 1.5rem;
+}

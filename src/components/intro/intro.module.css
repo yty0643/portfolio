@@ -1,0 +1,22 @@
+.intro{
+    /* border-bottom: 1px solid rgb(188, 195, 208);
+    padding-bottom: 2rem; */
+    margin-bottom: 6rem;
+}
+
+.title{
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subTitle{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.description{
+    font-size: 0.9rem;
+    font-weight: 400;
+}

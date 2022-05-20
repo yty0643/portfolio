@@ -1,26 +1,89 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import styles from './App.module.css';
+import Intro from './components/intro/intro';
+import Skils from './components/skils/skils';
+import URLs from './components/urls/urls';
+
+export interface ISkill{
+  isActive: boolean,
+  name: string,
+  color: string,
+};
+
+export interface ISkills{
+  [key: string]: ISkill,
+};
+
+export interface IHandle{
+  (item: ISkill, isActive: boolean): void;
+};
 
 function App() {
+  const [skills, setSkills] = useState<ISkills>({
+    "Javascript": {
+      isActive: false,
+      name: "Javascript",
+      color: "rgb(247, 223, 43)",
+    },
+    "Typescript": {
+      isActive: false,
+      name: "Typescript",
+      color: "rgb(72, 136, 225)",
+    },
+    "React": {
+      isActive: false,
+      name: "React",
+      color: "rgb(99, 221, 255)",
+    },
+    "C++": {
+      isActive: false,
+      name: "C++",
+      color: "rgb(136, 170, 222)",
+    },
+    "CSS": {
+      isActive: false,
+      name: "CSS",
+      color: "rgb(24, 96, 205)",
+    },
+    "HTML": {
+      isActive: false,
+      name: "HTML",
+      color: "rgb(205, 57, 24)",
+    },
+    "GitHub": {
+      isActive: false,
+      name: "GitHub",
+      color: "rgb(8, 29, 74)",
+    },
+    "REST API": {
+      isActive: false,
+      name: "REST API",
+      color: "rgb(96, 174, 63)",
+    },
+  });
+
+  const handleHover: IHandle = (item, isActive) => {
+    setSkills(skill => {
+      const temp = { ...skill };
+      temp[item.name] = {
+        ...temp[item.name],
+        isActive,
+      };
+      return temp;
+    })
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+      <section className={styles.dataSection}>
+        <Intro />
+        <URLs />
+        <Skils skills={skills} handleHover={handleHover} />
+      </section>
+      <section className={styles.detailSection}>
+      </section>
     </div>
   );
-}
+};
 
 export default App;

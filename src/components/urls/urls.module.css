@@ -1,0 +1,12 @@
+.urls{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.title{
+    font-weight: 700;
+    width: 7rem;
+    padding-right: 1.5rem;
+}
