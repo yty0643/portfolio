@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './intro.module.css';
+
 const Intro = ({ }) => {
-    
     return (
         <div className={styles.intro}>
             <p className={styles.title}>윤태영</p>

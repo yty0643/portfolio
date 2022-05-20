@@ -25,3 +25,9 @@
     font-weight: 300;
     font-size: 0.8rem;
 }
+
+@media screen and (max-width: 48rem) {
+    .titleBox{
+        flex-direction: column;
+    }
+}

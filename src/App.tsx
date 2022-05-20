@@ -3,7 +3,9 @@ import styles from './App.module.css';
 import Intro from './components/intro/intro';
 import Projects from './components/projects/projects';
 import Skills from './components/skills/skills';
+import University from './components/university/university';
 import URLs from './components/urls/urls';
+import URLBtn from './components/url_btn/url_btn';
 
 export interface ISkill{
   isActive: boolean,
@@ -76,7 +78,7 @@ function App() {
         isActive,
       };
       return temp;
-    })
+    });
   };
 
   return (
@@ -88,7 +90,10 @@ function App() {
       </section>
       <section className={styles.detailSection}>
         <Projects skills={skills} handleHover={handleHover} />
-        
+        <University />
+        <div className={styles.docs}>
+          <URLBtn path={"https://github.com/yty0643/portfolio"} name={"Docs"}/>
+        </div>
       </section>
     </div>
   );

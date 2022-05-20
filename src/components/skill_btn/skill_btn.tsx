@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IHandle, ISkill } from '../../App';
 import styles from './skill_btn.module.css';
 
-const VACSkillBtn = ({ item, handleHover }: { item: ISkill, handleHover: IHandle }) => {
+const SkillBtn = ({ item, handleHover }: { item: ISkill, handleHover: IHandle }) => {
     return (
         <div className={styles.btn}>
             <a className={`${styles.title} ${item.isActive && styles.active}`}
@@ -16,4 +16,4 @@ const VACSkillBtn = ({ item, handleHover }: { item: ISkill, handleHover: IHandle
     );
 };
 
-export default VACSkillBtn;
+export default SkillBtn;

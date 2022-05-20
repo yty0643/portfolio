@@ -11,20 +11,47 @@
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-.dataSection{
+.dataSection,
+.detailSection{
+  position: relative;
   width: 50%;
   height: 100%;
   padding: 0 2.5vw 0 8vw;
-}
-
-.detailSection{
-  width: 50%;
-  height: 100%;
-  padding: 0 8vw 0 1vw;
   overflow-y: scroll;
 }
 
+.detailSection{
+  padding: 0 8vw 0 1vw;
+}
+
+.dataSection::-webkit-scrollbar,
 .detailSection::-webkit-scrollbar{
   display:none;
 }
 
+.docs{
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (max-width: 48rem) {
+  .app{
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .dataSection,
+  .detailSection{
+    width: 100%;
+    height: auto;
+    padding: 0 5vw 0 5vw;
+    overflow-y: visible;
+  }
+  .dataSection{
+    margin-bottom: 6rem;
+  }
+  .docs{
+    justify-content: center;
+    margin: 3rem 0;
+  }
+}

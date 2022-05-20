@@ -1,0 +1,28 @@
+.univ{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: rgba(5, 20, 50, 0.46);
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+}
+
+.data{
+    
+    font-size: 0.9rem;
+}

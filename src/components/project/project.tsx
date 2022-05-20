@@ -1,6 +1,6 @@
 import React from 'react';
 import { IHandle, ISkills } from '../../App';
-import VACSkillBtn from '../skill_btn/VAC_skill_btn';
+import SkillBtn from '../skill_btn/skill_btn';
 import styles from './project.module.css';
 
 export interface IItem{
@@ -12,13 +12,12 @@ export interface IItem{
     path: string,
 }
 
-const VACProject = ({ skills, handleHover, item }: { skills: ISkills, handleHover: IHandle, item: IItem }) => {
-    
+const Project = ({ skills, handleHover, item }: { skills: ISkills, handleHover: IHandle, item: IItem }) => {
     return (
         <div className={styles.project}>
             <div className={styles.skills}>
                 {item.skills.map((item,index) => (
-                    <VACSkillBtn key={index+100} item={skills[item]} handleHover={handleHover} />
+                    <SkillBtn key={index+100} item={skills[item]} handleHover={handleHover} />
                 ))}
             </div>
             <div className={styles.info} onClick={() => {
@@ -36,4 +35,4 @@ const VACProject = ({ skills, handleHover, item }: { skills: ISkills, handleHove
         </div>
     );
 };
-export default VACProject;
+export default Project;

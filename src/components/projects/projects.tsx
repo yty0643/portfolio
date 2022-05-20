@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { IHandle, ISkills } from '../../App';
-import VACProject, { IItem } from '../project/VAC_project';
+import Project, { IItem } from '../project/project';
 import styles from './projects.module.css';
 
-
-
 const Projects = ({ skills, handleHover }: { skills: ISkills, handleHover: IHandle }) => {
-
     const projects: IItem[] = [{
         skills: ["Typescript", "React", "GitHub", "VAC Pattern", "REST API", "CSS", "HTML"],
         title: "습관관리 웹", subTitle: "프론트엔드",
@@ -36,7 +33,7 @@ const Projects = ({ skills, handleHover }: { skills: ISkills, handleHover: IHand
                 <p className={styles.description}>클릭 시 깃허브 저장소로 이동합니다.</p>
             </div>
             {projects.map((item, index) => (
-                <VACProject key={index + 1000} skills={skills} handleHover={handleHover} item={item}/>                
+                <Project key={index + 1000} skills={skills} handleHover={handleHover} item={item}/>                
             ))}
         </div>
     );

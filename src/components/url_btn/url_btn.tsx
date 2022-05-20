@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './url_btn.module.css';
 
-const VACURLBtn = ({ path }: { path: string }) => {
+const URLBtn = ({ path, name }: { path: string, name: string }) => {
     const [isActive, setIsActive] = useState<boolean>(false);
     return (
         <div className={styles.btn}>
@@ -10,11 +10,11 @@ const VACURLBtn = ({ path }: { path: string }) => {
                 target="_blank"
                 onMouseEnter={() => { setIsActive(true) }}
                 onMouseLeave={() => { setIsActive(false) }}>
-                {path}
+                {name}
             </a>
             <div className={`${styles.cover} ${isActive && styles.active}`}></div>
             <div className={styles.cover2}></div>
         </div>
     );
 };
-export default VACURLBtn;
+export default URLBtn;

@@ -1,14 +1,14 @@
 .skills{
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .most,
 .tag{
-    font-size: 0.9rem;
     display: flex;
     align-items: center;
+    font-size: 0.9rem;
 }
-
 .most{
     margin-bottom: 0.5rem;
 }
@@ -17,4 +17,35 @@
     font-weight: 700;
     width: 7rem;
     padding-right: 1.5rem;
+}
+.title::after{
+    content: ":";
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: calc(100% - 7rem);
+}
+
+@media screen and (max-width: 48rem) {
+    .most,
+    .tag{
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    .btns{
+        width: auto;
+        justify-content: center;
+    }
+    .title{
+        width: auto;
+        padding-right: 0;
+    }
+    .title::after{
+        content: "";
+    }
 }
