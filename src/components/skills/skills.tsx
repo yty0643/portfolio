@@ -20,6 +20,7 @@ const Skills = ({ skills, handleHover }: { skills: ISkills, handleHover: IHandle
                 <VACSkillBtn key={5} item={skills.HTML} handleHover={handleHover} />
                 <VACSkillBtn key={6} item={skills.GitHub} handleHover={handleHover} />
                 <VACSkillBtn key={7} item={skills[`REST API`]} handleHover={handleHover} />
+                <VACSkillBtn key={8} item={skills[`VAC Pattern`]} handleHover={handleHover} />
             </div>
         </div>
     );

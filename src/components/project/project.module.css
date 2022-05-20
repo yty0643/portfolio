@@ -1,0 +1,45 @@
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.9rem;
+}
+
+.skills{
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 100%;
+    padding: 8%;
+    background: linear-gradient(rgb(240, 240, 240), rgb(212, 215, 224));
+    margin-bottom: 3rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all ease-in 100ms;
+}
+.info:hover{
+    transform: scale(1.01);
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 3px 4px 10px -5px #7b7b7b;
+}
+
+.title{
+    font-size:1.1rem;
+    font-weight: 700;
+    margin-bottom: 0rem;
+}
+
+.subTitle{
+    font-size:0.9rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.list{
+    list-style-type:circle;
+}

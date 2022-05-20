@@ -1,0 +1,27 @@
+.projects{
+    display: flex;
+    flex-direction: column;
+}
+
+.titleBox{
+    z-index: 1;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    margin-bottom: 0.5rem;
+}
+
+.title{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: rgba(5, 20, 50, 0.46);
+}
+
+.description{
+    color: rgba(105, 108, 114, 0.46);
+    font-weight: 300;
+    font-size: 0.8rem;
+}

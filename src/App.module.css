@@ -1,26 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 .app{
-  box-sizing: border-box;
   display: flex;
   align-items: center; 
   justify-content: center;
   width: calc(100vw - (100vw - 100%));
-  height: auto;
-  padding: 12vh 8vw;
+  height: 100vh;
+  padding: 12vh 0;
+  background-color: transparent;
   font-family: 'Noto Sans KR', sans-serif;
 }
 
 .dataSection{
   width: 50%;
   height: 100%;
-  padding-right: 4%;
-  /* border: 0.5px solid rgb(209, 209, 209); */
+  padding: 0 2.5vw 0 8vw;
 }
 
 .detailSection{
   width: 50%;
   height: 100%;
-  padding-left: 2%;
-  /* border: 0.5px solid rgb(209, 209, 209); */
+  padding: 0 8vw 0 1vw;
+  overflow-y: scroll;
 }
+
+.detailSection::-webkit-scrollbar{
+  display:none;
+}
+
+.test{
+  width: 100%;
+  height: 100rem;
+}
+

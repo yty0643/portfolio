@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './App.module.css';
 import Intro from './components/intro/intro';
+import Projects from './components/projects/projects';
 import Skills from './components/skills/skills';
 import URLs from './components/urls/urls';
 
@@ -60,6 +61,11 @@ function App() {
       name: "REST API",
       color: "rgb(96, 174, 63)",
     },
+    "VAC Pattern": {
+      isActive: false,
+      name: "VAC Pattern",
+      color: "rgb(76, 84, 87)",
+    },
   });
 
   const handleHover: IHandle = (item, isActive) => {
@@ -74,13 +80,15 @@ function App() {
   };
 
   return (
-    <div className={styles.app}>
+    <div className={styles.app} >
       <section className={styles.dataSection}>
         <Intro />
         <URLs />
         <Skills skills={skills} handleHover={handleHover} />
       </section>
       <section className={styles.detailSection}>
+        <Projects skills={skills} handleHover={handleHover}/>
+        <div className={styles.test}></div>
       </section>
     </div>
   );
