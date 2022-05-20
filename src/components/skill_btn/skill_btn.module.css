@@ -37,6 +37,9 @@
 .cover{
     border-radius: 3px;
 }
+.cover2{
+    padding-right: 1px;
+}
 .cover.active{
     left: 0%;
 }

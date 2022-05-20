@@ -87,8 +87,8 @@ function App() {
         <Skills skills={skills} handleHover={handleHover} />
       </section>
       <section className={styles.detailSection}>
-        <Projects skills={skills} handleHover={handleHover}/>
-        <div className={styles.test}></div>
+        <Projects skills={skills} handleHover={handleHover} />
+        
       </section>
     </div>
   );

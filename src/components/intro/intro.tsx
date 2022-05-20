@@ -5,7 +5,7 @@ const Intro = ({ }) => {
     return (
         <div className={styles.intro}>
             <p className={styles.title}>윤태영</p>
-            <p className={styles.subTitle}>Portfolio</p>
+            <p className={styles.subTitle}>포트폴리오</p>
             <p className={styles.description}>
                 안녕하세요. 주니어 웹 개발자(프론트엔드) 윤태영입니다.<br/>
                 주로 사용하는 언어는 Javascript 입니다. 이외에도 Typescript, React, CSS, HTML에 대한 개발 경험이 있으며, C++을 통해 알고리즘을 공부하고 있습니다.
