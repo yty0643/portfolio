@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './App.module.css';
 import Intro from './components/intro/intro';
-import Skils from './components/skils/skils';
+import Skills from './components/skills/skills';
 import URLs from './components/urls/urls';
 
 export interface ISkill{
@@ -78,7 +78,7 @@ function App() {
       <section className={styles.dataSection}>
         <Intro />
         <URLs />
-        <Skils skills={skills} handleHover={handleHover} />
+        <Skills skills={skills} handleHover={handleHover} />
       </section>
       <section className={styles.detailSection}>
       </section>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { IHandle, ISkills } from '../../App';
 import VACSkillBtn from '../skill_btn/VAC_skill_btn';
-import styles from './skils.module.css';
+import styles from './skills.module.css';
 
-const Skils = ({ skills, handleHover }: { skills: ISkills, handleHover: IHandle }) => {
+const Skills = ({ skills, handleHover }: { skills: ISkills, handleHover: IHandle }) => {
     
     return (
         <div className={styles.skills}>
@@ -25,4 +25,4 @@ const Skils = ({ skills, handleHover }: { skills: ISkills, handleHover: IHandle 
     );
 };
 
-export default Skils;
+export default Skills;
