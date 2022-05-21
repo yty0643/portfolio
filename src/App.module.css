@@ -58,6 +58,9 @@
 }
 
 @media screen and (max-width: 48rem) {
+  :root{
+    background-color: white;
+  }
   .app{
     flex-direction: column;
     justify-content: start;
