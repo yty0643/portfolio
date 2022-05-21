@@ -4,7 +4,7 @@ import Intro from './components/intro/intro';
 import Projects from './components/projects/projects';
 import Skills from './components/skills/skills';
 import University from './components/university/university';
-import URLs from './components/urls/urls';
+import Contact from './components/contact/contact';
 import URLBtn from './components/url_btn/url_btn';
 
 export interface ISkill{
@@ -17,11 +17,16 @@ export interface ISkills{
   [key: string]: ISkill,
 };
 
-export interface IHandle{
+export interface IHover{
   (item: ISkill, isActive: boolean): void;
 };
 
+export interface IFocus{
+  (isActive: boolean): void;
+};
+
 function App() {
+  const [isFoucs, setIsFocus] = useState<boolean>(false);
   const [skills, setSkills] = useState<ISkills>({
     "Javascript": {
       isActive: false,
@@ -70,7 +75,11 @@ function App() {
     },
   });
 
-  const handleHover: IHandle = (item, isActive) => {
+  const handleFocus: IFocus = (isActive) => {
+    setIsFocus(isActive);
+  };
+
+  const handleHover: IHover = (item, isActive) => {
     setSkills(skill => {
       const temp = { ...skill };
       temp[item.name] = {
@@ -83,13 +92,14 @@ function App() {
 
   return (
     <div className={styles.app} >
+      <div className={`${styles.cover} ${isFoucs && styles.active}`}></div>
       <section className={styles.dataSection}>
         <Intro />
-        <URLs />
+        <Contact />
         <Skills skills={skills} handleHover={handleHover} />
       </section>
       <section className={styles.detailSection}>
-        <Projects skills={skills} handleHover={handleHover} />
+        <Projects skills={skills} handleHover={handleHover} handleFocus={handleFocus}/>
         <University />
         <div className={styles.docs}>
           <URLBtn path={"https://github.com/yty0643/portfolio"} name={"Docs"}/>

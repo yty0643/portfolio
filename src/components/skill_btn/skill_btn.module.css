@@ -1,5 +1,4 @@
 .btn{
-    z-index: 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -8,7 +7,6 @@
     border-radius: 5px;
     font-size: 0.9rem;
     background-color: rgb(222, 228, 240);
-    cursor: pointer;
 }
 .title.active{
     color: white;
@@ -22,13 +20,11 @@
     transition: all cubic-bezier(.5,0,0,.5) 300ms;
 }
 
-.cover,
-.cover2{
-    z-index: 1;
+.cover{
     position: absolute;
     top: 0;
-    left: 100%;
-    width: 100%;
+    right: 0%;
+    width: 0%;
     height: 100%;
     background-color: white;
     transition: all cubic-bezier(.5,0,0,.5) 300ms;
@@ -37,9 +33,6 @@
 .cover{
     border-radius: 3px;
 }
-.cover2{
-    padding-right: 1px;
-}
 .cover.active{
-    left: 0%;
+    width: 100%;
 }

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { IHandle, ISkills } from '../../App';
+import { IHover, ISkills } from '../../App';
 import SkillBtn from '../skill_btn/skill_btn';
 import styles from './skills.module.css';
 
-const Skills = ({ skills, handleHover }: { skills: ISkills, handleHover: IHandle }) => {
+const Skills = ({ skills, handleHover }: { skills: ISkills, handleHover: IHover }) => {
     return (
         <div className={styles.skills}>
             <div className={styles.most}>

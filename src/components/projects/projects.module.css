@@ -4,7 +4,7 @@
 }
 
 .titleBox{
-    z-index: 1;
+    z-index: 2;
     position: sticky;
     display: flex;
     align-items: center;
@@ -16,8 +16,8 @@
 
 .title{
     font-size: 1.1rem;
-    font-weight: 700;
-    color: rgba(5, 20, 50, 0.46);
+    font-weight: 500;
+    color: rgba(5, 20, 50);
 }
 
 .description{

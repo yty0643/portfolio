@@ -13,7 +13,6 @@ const URLBtn = ({ path, name }: { path: string, name: string }) => {
                 {name}
             </a>
             <div className={`${styles.cover} ${isActive && styles.active}`}></div>
-            <div className={styles.cover2}></div>
         </div>
     );
 };

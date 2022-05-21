@@ -1,3 +1,4 @@
+.call,
 .urls{
     display: flex;
     align-items: center;
@@ -14,6 +15,7 @@
     content: ":";
 }
 
+.num,
 .btns{
     display: flex;
     align-items: center;
@@ -21,13 +23,18 @@
     flex-wrap: wrap;
     width: calc(100% - 7rem);
 }
+.num{
+    padding: 0 5px;
+}
 
 @media screen and (max-width: 48rem) {
+    .call,
     .urls{
         align-items: center;
         flex-direction: column;
         margin-bottom: 1rem;
     }
+    .num,
     .btns{
         width: auto;
     }
