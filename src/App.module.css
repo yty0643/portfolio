@@ -3,7 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh
+  height: 100vh;
+  background-color: rgb(202, 202, 202)
 }
 .app{
   display: flex;
