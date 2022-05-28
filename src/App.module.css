@@ -42,6 +42,9 @@
   padding: 0 2.5vw 0 8vw;
   overflow-y: scroll;
 }
+.dataSection{
+  position: relative;
+}
 
 .detailSection{
   padding: 0 8vw 0 0.5vw;

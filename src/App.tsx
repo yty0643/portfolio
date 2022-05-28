@@ -6,6 +6,8 @@ import Skills from './components/skills/skills';
 import University from './components/university/university';
 import Contact from './components/contact/contact';
 import URLBtn from './components/url_btn/url_btn';
+import Video from './components/video/video';
+
 
 export interface ISkill{
   isActive: boolean,
@@ -22,11 +24,12 @@ export interface IHover{
 };
 
 export interface IFocus{
-  (isActive: boolean): void;
+  (isActive: boolean, video: string|null): void;
 };
 
 function App() {
   const [isFoucs, setIsFocus] = useState<boolean>(false);
+  const [video, setVideo] = useState<string>("");
   const [skills, setSkills] = useState<ISkills>({
     "Javascript": {
       isActive: false,
@@ -73,10 +76,22 @@ function App() {
       name: "VAC Pattern",
       color: "rgb(76, 84, 87)",
     },
+    "Redux": {
+      isActive: false,
+      name: "Redux",
+      color: "rgb(120, 79, 123)",
+    },
+    "RTK": {
+      isActive: false,
+      name: "RTK",
+      color: "rgb(120, 79, 123)",
+    },
   });
 
-  const handleFocus: IFocus = (isActive) => {
+  const handleFocus: IFocus = (isActive, tempVideo) => {
     setIsFocus(isActive);
+    if(tempVideo)setVideo(tempVideo);
+    else setVideo('');
   };
 
   const handleHover: IHover = (item, isActive) => {
@@ -97,12 +112,13 @@ function App() {
         <Intro />
         <Contact />
         <Skills skills={skills} handleHover={handleHover} />
+        <Video video={video} />
       </section>
       <section className={styles.detailSection}>
-        <Projects skills={skills} handleHover={handleHover} handleFocus={handleFocus}/>
+        <Projects skills={skills} handleHover={handleHover} handleFocus={handleFocus} />
         <University />
         <div className={styles.docs}>
-          <URLBtn path={"https://github.com/yty0643/portfolio"} name={"Docs"}/>
+          <URLBtn path={"https://github.com/yty0643/portfolio"} name={"Docs"} />
         </div>
       </section>
     </div>

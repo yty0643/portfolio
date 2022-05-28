@@ -1,0 +1,13 @@
+.video{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+@media screen and (max-width: 48rem) {
+    .video{
+        display: none;
+    }
+}

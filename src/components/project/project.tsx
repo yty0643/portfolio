@@ -10,6 +10,7 @@ export interface IItem{
     description: string,
     list: string[],
     path: string,
+    video: string,
 }
 
 const Project = ({ skills, item, handleHover, handleFocus }: { skills: ISkills, item: IItem, handleHover: IHover, handleFocus: IFocus }) => {
@@ -26,10 +27,10 @@ const Project = ({ skills, item, handleHover, handleFocus }: { skills: ISkills, 
                     window.open(item.path);
                 }}
                 onMouseEnter={() => {
-                    handleFocus(true);
+                    handleFocus(true, item.video);
                 }}
                 onMouseLeave={() => {
-                    handleFocus(false);
+                    handleFocus(false, "");
                 }}>
                 <p className={styles.title}>{item.title}</p>
                 <p className={styles.subTitle}>{item.subTitle}</p>
