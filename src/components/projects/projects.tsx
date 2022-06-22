@@ -41,10 +41,10 @@ const Projects = ({ skills, handleHover, handleFocus }: { skills: ISkills, handl
             video: "",
         },
         {
-            skills: ["Redux", "RTK"],
+            skills: [],
             title: "개발 문서", subTitle: "공부한 내용 중에 중요하다고 생각되는 내용은 마크다운 문서로 작성하여 깃허브로 관리하고 있습니다.",
-            description: "가장 최근에 공부한 내용은 Redux, Redux-toolkit 입니다. 다음 프로젝트에 적용하기 위해 이론부터 꼼꼼하게 공부하고 있습니다.",
-            list: ["Redux", "Redux-toolkit", "useReducer", "VAC-pattern"],
+            description: "가장 최근에 공부한 내용은 NextJS 입니다. 다음 프로젝트에 적용하기 위해 이론부터 꼼꼼하게 공부하고 있습니다.",
+            list: [],
             path: "https://github.com/yty0643/development-documents",
             video: "",
         }
