@@ -86,6 +86,21 @@ function App() {
       name: "RTK",
       color: "rgb(120, 79, 123)",
     },
+    "Axios": {
+      isActive: false,
+      name: "Axios",
+      color: "rgb(81, 78, 131)",
+    },
+    "Firebase": {
+      isActive: false,
+      name: "Firebase",
+      color: "rgb(246, 198, 24)",
+    },
+    "AWS-Amplify": {
+      isActive: false,
+      name: "AWS-Amplify",
+      color: "rgb(233, 145, 21)",
+    },
   });
 
   const handleFocus: IFocus = (isActive, tempVideo) => {

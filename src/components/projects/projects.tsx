@@ -9,26 +9,26 @@ import receipt_video from '../../receipt.mp4';
 const Projects = ({ skills, handleHover, handleFocus }: { skills: ISkills, handleHover: IHover, handleFocus: IFocus }) => {
     const projects: IItem[] = [
         {
-            skills: ["Redux", "RTK", "Typescript", "React", "GitHub", "REST API", "CSS"],
+            skills: ["Typescript", "React", "Redux", "RTK", "Axios", "AWS-Amplify", "REST API", "GitHub", "CSS"],
             title: "계좌 거래내역 통계 웹", subTitle: "프론트엔드",
-            description: "Redux, RTK 을 활용한 개발 경험 및 REST API를 다루며 CORS, Proxy server, Ajax 관련 문제를 해결 및 기록하고, 개발 역량을 강화하기 위한 프로젝트",
-            list: ["Redux, RTK 라이브러리를 활용한 상태 관리", "금융결제원 API를 활용해 계좌 정보 조회", "CORS 개념 이해 및 문서 정리, proxy server를 활용한 교차 출처 리소스 접근", "라이브러리 도움 없이 Bar Chart, Line Chart, Donut Chart 구현", "Typescript, React로 개발", "GitHub로 버전 및 소스코드 관리"],
+            description: "Redux, RTK 을 활용한 개발 경험 및 Axios를 통해 REST API를 다루며 CORS, Proxy server, Ajax 관련 문제를 해결 및 기록하고, 개발 역량을 강화하기 위한 프로젝트",
+            list: ["Redux, RTK 라이브러리를 활용한 상태 관리", "Axios를 통한 REST API 사용", "AWS-Amplify를 통한 웹 호스팅", "금융결제원 API를 활용해 계좌 정보 조회", "CORS 개념 이해 및 문서 정리, proxy server를 활용한 교차 출처 리소스 접근", "라이브러리 도움 없이 Bar Chart, Line Chart, Donut Chart 구현", "Typescript, React로 개발", "GitHub로 버전 및 소스코드 관리"],
             path: "https://github.com/yty0643/smart-receipt",
             video: receipt_video,
         },
         {
-            skills: ["Typescript", "React", "GitHub", "VAC Pattern", "REST API", "CSS"],
+            skills: ["Typescript", "React", "Firebase", "GitHub", "VAC Pattern", "REST API", "CSS"],
             title: "습관관리 웹", subTitle: "프론트엔드",
             description: "VAC Pattern 설계 방식 이해 및 Typescript, React의 개발 역량을 향상을 위한 프로젝트",
-            list: ["Firebase를 통한 DB 및 인증 관리", "VAC Pattern을 적용한 코드 설계", "Typescript, React로 개발", "GitHub로 버전 및 소스코드 관리"],
+            list: ["Firebase를 통한 DB 및 인증 관리", "VAC Pattern을 적용한 코드 설계", "Typescript, React로 개발", "GitHub로 버전 및 소스코드 관리와 웹 호스팅"],
             path: "https://github.com/yty0643/habit-manager",
             video: habit_video,
         },
         {
-            skills: ["Javascript", "React", "GitHub", "REST API", "CSS"],
+            skills: ["Javascript", "React", "Firebase", "GitHub", "REST API", "CSS"],
             title: "커밋예약 웹", subTitle: "프론트엔드",
             description: "REST API 활용 및 Javascript, React의 개발 역량을 향상을 위한 프로젝트",
-            list: ["Firebase를 통한 DB 및 인증 관리", "GitHub API를 활용한 커밋 및 저장소 데이터 확인", "react-simple-tree-menu 라이브러리를 활용하여 트리형 디렉터리 구조 개발", "GitHub로 버전 및 소스코드 관리"],
+            list: ["Firebase를 통한 DB 및 인증 관리", "GitHub API를 활용한 커밋 및 저장소 데이터 확인", "react-simple-tree-menu 라이브러리를 활용하여 트리형 디렉터리 구조 개발", "GitHub로 버전 및 소스코드 관리와 웹 호스팅"],
             path: "https://github.com/yty0643/crw",
             video: crw_video,
         },
