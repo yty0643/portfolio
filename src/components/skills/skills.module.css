@@ -12,6 +12,9 @@
 .most{
     margin-bottom: 0.5rem;
 }
+.tag{
+    align-items: flex-start;
+}
 
 .title{
     font-weight: 700;

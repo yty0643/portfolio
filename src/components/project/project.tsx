@@ -1,5 +1,7 @@
 import React from 'react';
-import { IFocus, IHover, ISkills } from '../../App';
+import { useSelector } from 'react-redux';
+import { IFocus, IHover, ISkill } from '../../App';
+import { RootState } from '../../app/store';
 import SkillBtn from '../skill_btn/skill_btn';
 import styles from './project.module.css';
 
@@ -13,12 +15,23 @@ export interface IItem{
     video: string,
 }
 
-const Project = ({ skills, item, handleHover, handleFocus }: { skills: ISkills, item: IItem, handleHover: IHover, handleFocus: IFocus }) => {
+const Project = ({ skills, item, handleHover, handleFocus }: { skills: ISkill[], item: IItem, handleHover: IHover, handleFocus: IFocus }) => {
+    const selectedIdx = useSelector((state: RootState) => state.selected.index);
+
+    const skillsIdx = item.skills.map((item) => {
+        let temp: number = 0;
+        skills.map((item2) => {
+            if (item2.name == item)
+                temp = item2.key;
+        })
+        return temp;
+    });
+    
     return (
         <div className={styles.project}>
             <div className={styles.skills}>
-                {item.skills.map((item, index) => (
-                    <SkillBtn key={index + 100} item={skills[item]} handleHover={handleHover} />
+                {skillsIdx.map((idx, index) => (
+                    <SkillBtn key={index + 100} item={skills[idx]} isActive={selectedIdx==idx} handleHover={handleHover} />
                 ))}
             </div>
             <div

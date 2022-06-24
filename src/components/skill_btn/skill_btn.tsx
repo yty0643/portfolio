@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IHover, ISkill } from '../../App';
 import styles from './skill_btn.module.css';
 
-const SkillBtn = ({ item, handleHover }: { item: ISkill, handleHover: IHover }) => {
+const SkillBtn = ({ item, isActive, handleHover }: { item: ISkill, isActive: boolean, handleHover: IHover }) => {
+    
     return (
         <div className={styles.btn}>
-            <a className={`${styles.title} ${item.isActive && styles.active}`}
-                onMouseEnter={() => { handleHover(item, true) }}
-                onMouseLeave={() => { handleHover(item, false) }}>
+            <a className={`${styles.title} ${isActive && styles.active}`}
+                onMouseEnter={() => { handleHover(item.key) }}>
                 {item.name}
             </a>
-            <div className={`${styles.cover} ${item.isActive && styles.active}`} style={{ backgroundColor: item.color }}></div>
+            <div className={`${styles.cover} ${isActive && styles.active}`} style={{ backgroundColor: item.color }}></div>
         </div>
     );
 };
 
-export default SkillBtn;
+export default React.memo(SkillBtn);

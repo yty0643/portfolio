@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { IFocus, IHover, ISkills } from '../../App';
+import { IFocus, IHover, ISkill } from '../../App';
 import Project, { IItem } from '../project/project';
 import styles from './projects.module.css';
 import habit_video from '../../habit.mp4';
 import crw_video from '../../crw.mp4';
 import receipt_video from '../../receipt.mp4';
 
-const Projects = ({ skills, handleHover, handleFocus }: { skills: ISkills, handleHover: IHover, handleFocus: IFocus }) => {
+const Projects = ({ skills, handleHover, handleFocus }: { skills: ISkill[], handleHover: IHover, handleFocus: IFocus }) => {
     const projects: IItem[] = [
         {
             skills: ["Typescript", "React", "Redux", "RTK", "Axios", "AWS-Amplify", "REST API", "GitHub", "CSS"],
@@ -69,4 +69,4 @@ const Projects = ({ skills, handleHover, handleFocus }: { skills: ISkills, handl
     );
 };
 
-export default Projects;
+export default React.memo(Projects);
